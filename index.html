@@ -20,15 +20,43 @@
         <div class="background-right"></div>
         <div class="arm"></div>
     </div>
+        
     <div class="controls">
+        <div class="metro">
         <input id="metronome" name="controls" type="checkbox" checked>Metronome
+        </div>
+        <div class="kick">
         <input id="kickdrum" name="controls" type="checkbox">Kick Drum
         <input min="1" max="4" type="number" id="kickNum">
+        <input min="1" max="4" type="number" id="kickNum2">
+        </div>
+        <div class="snare">
         <input id="snaredrum" name="controls" type="checkbox">Snare Drum
         <input min="1" max="4" type="number" id="snareNum">
+        <input min="1" max="4" type="number" id="snareNum2">
+        </div>
+        <div class="hihat">
         <input id="hihat" name="controls" type="checkbox">Hi Hat
         <input min="1" max="4" type="number" id="hihatNum">
+        <input min="1" max="4" type="number" id="hihatNum2">
+        </div>
+        <div class="eight">
+        <input id="eightBass" name="controls" type="checkbox">808 Bass
+        <input min="1" max="4" type="number" id="eightBassNum">
+        </div>
         
+    </div>
+    <div class="tempooption">
+        <label id="tempolabel" for="tempos">
+            Choose an option to change the tempo:
+        </label>
+        <select name="tempos" id="tempos">
+            <option value="slowest">Slowest</option>
+            <option value="slower">Slower</option>
+            <option selected value="normal">Normal</option>
+            <option value="faster">Faster</option>
+            <option value="fastest">Fastest</option>
+        </select>
     </div>
 
     <script src="main.js"></script>

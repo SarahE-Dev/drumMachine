@@ -9,7 +9,7 @@ body {
     justify-content: center;
     margin: none;
     flex-direction: column;
-    background-color: #81b29a;
+    background-color: black;
 }
 
 .tip {
@@ -17,12 +17,14 @@ body {
     font-weight: bold;
     margin: 24px;
     font-family: 'Courier New', Courier, monospace;
-    color: #f4f1de;
+    color: white;
+    text-shadow: 2px 2px purple;
 }
 
 p {
     text-align: center;
-    color: #e07a5f;
+    color: white;
+    text-shadow: 2px 2px purple;
 }
 
 .metronome {
@@ -33,42 +35,43 @@ p {
 }
 
 .controls {
-    color:#f4f1de;
-    text-shadow: 2px 2px #e07a5f;
-    padding: 20px;
-    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px purple;
+    padding: 5px;
+    font-size: 20px;
 }
 
-input {
-    margin: 20px;
-}
 
 
 
 .background-left {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid purple;
     border-left: 100px solid transparent;
 }
 
 .background-center {
     flex: 1;
-    background-color: #f2cc8f;
+    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .background-right {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid purple;
     border-right: 100px solid transparent;
+}
+.metro {
+    display: flex;
+    justify-content: center;
 }
 
 .core {
     flex: 1;
     width: 30%;
-    background-color: #f4f1de;
+    background-color: black;
     margin: 24px 0;
-    border: 6px dashed #e07a5f;
+    border: 6px dashed purple;
 }
 
 @keyframes tick {
@@ -80,12 +83,22 @@ input {
 .arm {
     height: 300px;
     width: 20px;
-    background-color: #3d405b;
+    background-color: white;
     position: absolute;
     bottom: 5px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     left: 165px;
     transform-origin: bottom center;
-    animation: tick 1200ms ease-in-out infinite;
+    animation: tick 2000ms ease-in-out infinite;
+}
+
+#tempolabel {
+    color: white;
+    text-shadow: 2px 2px purple;
+    font-size: 20px;
+}
+
+.tempooption {
+    padding: 10px;
 }
