@@ -17,6 +17,12 @@ body {
     font-weight: bold;
     margin: 24px;
     font-family: 'Courier New', Courier, monospace;
+    color: #f4f1de;
+}
+
+p {
+    text-align: center;
+    color: #e07a5f;
 }
 
 .metronome {
@@ -25,6 +31,19 @@ body {
     height: 400px;
     position: relative;
 }
+
+.controls {
+    color:#f4f1de;
+    text-shadow: 2px 2px #e07a5f;
+    padding: 20px;
+    font-size: 24px;
+}
+
+input {
+    margin: 20px;
+}
+
+
 
 .background-left {
     border-bottom: 400px solid #e07a5f;

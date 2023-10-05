@@ -10,8 +10,8 @@
 <body>
     <div class="tip">
         (Click anywhere to hear sound...)
+        <p></p>
     </div>
-
     <div class="metronome">
         <div class="background-left"></div>
         <div class="background-center">
@@ -19,6 +19,16 @@
         </div>
         <div class="background-right"></div>
         <div class="arm"></div>
+    </div>
+    <div class="controls">
+        <input id="metronome" name="controls" type="checkbox" checked>Metronome
+        <input id="kickdrum" name="controls" type="checkbox">Kick Drum
+        <input min="1" max="4" type="number" id="kickNum">
+        <input id="snaredrum" name="controls" type="checkbox">Snare Drum
+        <input min="1" max="4" type="number" id="snareNum">
+        <input id="hihat" name="controls" type="checkbox">Hi Hat
+        <input min="1" max="4" type="number" id="hihatNum">
+        
     </div>
 
     <script src="main.js"></script>
