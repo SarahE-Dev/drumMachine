@@ -6,39 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metronome</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2dc1fd3bbc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="tip">
-        (Click anywhere to hear sound...)
+        Click anywhere to hear sound...
         <p></p>
     </div>
-    <div class="metronome">
-        <div class="a">⍟</div>
+    <div>
+        <div class="a fas fa-headphones-simple"></div>
     </div>
         
     <div class="controls">
         <div class="metro">
         <input id="metronome" name="controls" type="checkbox" checked>Metronome
         </div>
-        <div class="kick">
-        <input id="kickdrum" name="controls" type="checkbox">Kick Drum
-        <input min="1" max="4" type="number" id="kickNum">
-        <input min="1" max="4" type="number" id="kickNum2">
+        <div class="columns">
+        <div class="column">
+            <div class="kick">
+            <input id="kickdrum" name="controls" type="checkbox">Kick Drum
+            <input min="1" max="4" type="number" id="kickNum">
+            <input min="1" max="4" type="number" id="kickNum2">
+            </div>
+            <div class="snare">
+            <input id="snaredrum" name="controls" type="checkbox">Snare Drum
+            <input min="1" max="4" type="number" id="snareNum">
+            <input min="1" max="4" type="number" id="snareNum2">
+            </div>
+            <div class="hihat">
+            <input id="hihat" name="controls" type="checkbox">Hi Hat
+            <input min="1" max="4" type="number" id="hihatNum">
+            <input min="1" max="4" type="number" id="hihatNum2">
+            </div>
+            <div class="eight">
+            <input id="eightBass" name="controls" type="checkbox">808 Bass
+            <input min="1" max="4" type="number" id="eightBassNum">
+            </div>
         </div>
-        <div class="snare">
-        <input id="snaredrum" name="controls" type="checkbox">Snare Drum
-        <input min="1" max="4" type="number" id="snareNum">
-        <input min="1" max="4" type="number" id="snareNum2">
+        <div class="column">
+            <div class="tom">
+            <input id="tom" name="controls" type="checkbox">Tom
+            <input min="1" max="4" type="number" id="tomNum">
+            <input min="1" max="4" type="number" id="tomNum2">
+            </div>
+            <div class="snare2">
+            <input id="snare2" name="controls" type="checkbox">Snare 2
+            <input min="1" max="4" type="number" id="snare2Num">
+            <input min="1" max="4" type="number" id="snare2Num2">
+            </div>
+            <div class="hat2">
+            <input id="hat2" name="controls" type="checkbox">Hat 2
+            <input min="1" max="4" type="number" id="hat2Num">
+            <input min="1" max="4" type="number" id="hat2Num2">
+            </div>
+            <div class="closedHat">
+            <input id="closedHat" name="controls" type="checkbox">Closed Hat
+            <input min="1" max="4" type="number" id="closedHatNum">
+            <input min="1" max="4" type="number" id="closedHatNum2">
+            </div>
         </div>
-        <div class="hihat">
-        <input id="hihat" name="controls" type="checkbox">Hi Hat
-        <input min="1" max="4" type="number" id="hihatNum">
-        <input min="1" max="4" type="number" id="hihatNum2">
-        </div>
-        <div class="eight">
-        <input id="eightBass" name="controls" type="checkbox">808 Bass
-        <input min="1" max="4" type="number" id="eightBassNum">
-        </div>
+    </div>
         
     </div>
     <div class="tempooption">

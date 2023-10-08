@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
@@ -13,10 +14,7 @@ body {
 }
 
 .tip {
-    font-style: italic;
-    font-weight: bold;
     margin: 24px;
-    font-family: 'Courier New', Courier, monospace;
     color: white;
     text-shadow: 2px 2px purple;
 }
@@ -33,17 +31,18 @@ p {
     text-shadow: 2px 2px purple;
     padding: 5px;
     font-size: 20px;
+    margin-top: 35px;
 }
 
 .a {
     font-size: 190px;
-    animation: pulse 2s linear infinite;
+    animation: pulse 1200ms linear infinite;
 }
 
 @keyframes pulse {
 0% {
     
-    transform: scale(1.1);
+    transform: scale(1.2); 
     color: deeppink;
 }
 50% {
@@ -52,7 +51,8 @@ p {
 }
 100% {
    transform: scale(1);
-   color: blueviolet;
+   opacity: 0;
+   color: blue;
 }
 }
 
@@ -69,4 +69,13 @@ p {
 .metro {
     display: flex;
     justify-content: center;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    margin: 15px;
 }

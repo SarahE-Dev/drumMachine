@@ -5,6 +5,10 @@ const kickdrum = new Audio('sounds/kick-drum.mp3');
 const snaredrum = new Audio('sounds/snare-drum.mp3');
 const hihat = new Audio('sounds/hi-hat.mp3');
 const eightBass = new Audio('489892__tkky__slutty-808.wav');
+const tom = new Audio('sounds/2108__opm__tm_set4 (1).wav');
+const snare2 = new Audio('sounds/2082__opm__cp_set3.wav');
+const hat2 = new Audio('sounds/2094__opm__oh_set5.wav');
+const closedHat = new Audio('sounds/2079__opm__ch_sset3.wav');
 
 
 let count = 0;
@@ -26,6 +30,18 @@ function update() {
     const eightBassBox = document.querySelector('#eightBass');
     const eightBassBeat = document.querySelector('#eightBassNum');
     const kickBeat2 = document.querySelector('#kickNum2');
+    const tomBox = document.querySelector('#tom');
+    const tomNum = document.querySelector('#tomNum');
+    const tomNum2 = document.querySelector('#tomNum2');
+    const snare2Box = document.querySelector('#snare2');
+    const snare2Num = document.querySelector('#snare2Num');
+    const snare2Num2 = document.querySelector('#snare2Num2');
+    const hat2Box = document.querySelector('#hat2');
+    const hat2Num = document.querySelector('#hat2Num');
+    const hat2Num2 = document.querySelector('#hat2Num2');
+    const closedHatBox = document.querySelector('#closedHat');
+    const closedHatNum = document.querySelector('#closedHatNum');
+    const closedHatNum2 = document.querySelector('#closedHatNum2');
 
     // Play the 'tick' sound
     if(metronomeBox.checked){if(count % 4 !== 0){
@@ -63,6 +79,38 @@ function update() {
         }
     
     }
+    if(tomBox.checked){
+        if(tomNum.value == count){
+            tom.play()
+        }
+        if(tomNum2.value == count){
+            tom.play()
+        }
+    }
+    if(snare2Box.checked){
+        if(snare2Num.value == count){
+            snare2.play()
+        }
+        if(snare2Num2.value == count){
+            snare2.play()
+        }
+    }
+    if(hat2Box.checked){
+        if(hat2Num.value == count){
+            hat2.play()
+        }
+        if(hat2Num2.value == count){
+            hat2.play()
+        }
+    }
+    if(closedHatBox.checked){
+        if(closedHatNum.value == count){
+            closedHat.play()
+        }
+        if(closedHatNum2.value == count){
+            closedHat.play()
+        }
+    }
 
     
     
@@ -77,32 +125,32 @@ temposelection.addEventListener('change', ()=>{
     let pulse = document.querySelector('.a');
     if(temposelection.value === 'fastest'){
         clearInterval(intervalID)
-        setupUpdate(800)
-        pulse.style.animation = 'pulse 1600ms linear infinite';
+        setupUpdate(500)
+        pulse.style.animation = 'pulse 1000ms linear infinite';
         
     }
     if(temposelection.value === 'faster'){
         clearInterval(intervalID)
-        setupUpdate(900)
-        pulse.style.animation = 'pulse 1800ms linear infinite';
+        setupUpdate(550)
+        pulse.style.animation = 'pulse 1100ms linear infinite';
         
     }
     if(temposelection.value === 'normal'){
         clearInterval(intervalID)
-        setupUpdate(1000)
-        pulse.style.animation = 'pulse 2000ms linear infinite';
+        setupUpdate(600)
+        pulse.style.animation = 'pulse 1200ms linear infinite';
         
     }
     if(temposelection.value === 'slower'){
         clearInterval(intervalID)
-        setupUpdate(1100)
-        pulse.style.animation = 'pulse 2200ms linear infinite';
+        setupUpdate(650)
+        pulse.style.animation = 'pulse 1300ms linear infinite';
         
     }
     if(temposelection.value === 'slowest'){
         clearInterval(intervalID)
-        setupUpdate(1200)
-        pulse.style.animation = 'pulse 2400ms linear infinite';
+        setupUpdate(700)
+        pulse.style.animation = 'pulse 1400ms linear infinite';
         
     }
 })
@@ -120,5 +168,5 @@ function setupUpdate(speed) {
 
 
 
-setTimeout(setupUpdate(1000), 300);
+setTimeout(setupUpdate(600), 300);
 
