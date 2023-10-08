@@ -74,35 +74,35 @@ function update() {
 let temposelection = document.querySelector('#tempos');
 
 temposelection.addEventListener('change', ()=>{
-    let arm = document.querySelector('.arm');
+    let pulse = document.querySelector('.a');
     if(temposelection.value === 'fastest'){
         clearInterval(intervalID)
         setupUpdate(800)
-        arm.style.animation = 'tick 1600ms ease-in-out infinite';
+        pulse.style.animation = 'pulse 1600ms linear infinite';
         
     }
     if(temposelection.value === 'faster'){
         clearInterval(intervalID)
         setupUpdate(900)
-        arm.style.animation = 'tick 1800ms ease-in-out infinite';
+        pulse.style.animation = 'pulse 1800ms linear infinite';
         
     }
     if(temposelection.value === 'normal'){
         clearInterval(intervalID)
         setupUpdate(1000)
-        arm.style.animation = 'tick 2000ms ease-in-out infinite';
+        pulse.style.animation = 'pulse 2000ms linear infinite';
         
     }
     if(temposelection.value === 'slower'){
         clearInterval(intervalID)
         setupUpdate(1100)
-        arm.style.animation = 'tick 2200ms ease-in-out infinite';
+        pulse.style.animation = 'pulse 2200ms linear infinite';
         
     }
     if(temposelection.value === 'slowest'){
         clearInterval(intervalID)
         setupUpdate(1200)
-        arm.style.animation = 'tick 2400ms ease-in-out infinite';
+        pulse.style.animation = 'pulse 2400ms linear infinite';
         
     }
 })
