@@ -36,13 +36,12 @@ p {
 
 .a {
     font-size: 190px;
-    animation: pulse 1200ms linear infinite;
 }
 
 @keyframes pulse {
 0% {
     
-    transform: scale(1.2); 
+    transform: scale(1.1); 
     color: deeppink;
 }
 50% {

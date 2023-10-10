@@ -1,4 +1,3 @@
-// Setup 'tick' sound
 const tick = new Audio('sounds/tick.mp3');
 const tock = new Audio('sounds/tock.mp3');
 const kickdrum = new Audio('sounds/kick-drum.mp3');
@@ -12,7 +11,7 @@ const closedHat = new Audio('sounds/2079__opm__ch_sset3.wav');
 
 
 let count = 0;
-// This function is called every 600ms
+
 function update() {
     count++
     if(count > 4){
@@ -43,33 +42,23 @@ function update() {
     const closedHatNum = document.querySelector('#closedHatNum');
     const closedHatNum2 = document.querySelector('#closedHatNum2');
 
-    // Play the 'tick' sound
     if(metronomeBox.checked){if(count % 4 !== 0){
         tick.play()
     }else{
         tock.play()
     }}
     if(kickdrumBox.checked){
-        if(kickBeat.value == count){
-            kickdrum.play()
-        }
-        if(kickBeat2.value == count){
+        if(kickBeat.value == count || kickBeat2.value == count){
             kickdrum.play()
         }
     }
     if(snaredrumBox.checked){
-        if(snareBeat.value == count){
-            snaredrum.play()
-        }
-        if(snareBeat2.value == count){
+        if(snareBeat.value == count || snareBeat2.value == count){
             snaredrum.play()
         }
     }
     if(hihatBox.checked){
-        if(hihatBeat.value == count){
-            hihat.play()
-        }
-        if(hihatBeat2.value == count){
+        if(hihatBeat.value == count || hihatBeat2.value == count){
             hihat.play()
         }
     }
@@ -80,40 +69,26 @@ function update() {
     
     }
     if(tomBox.checked){
-        if(tomNum.value == count){
-            tom.play()
-        }
-        if(tomNum2.value == count){
+        if(tomNum.value == count || tomNum2.value == count){
             tom.play()
         }
     }
     if(snare2Box.checked){
-        if(snare2Num.value == count){
-            snare2.play()
-        }
-        if(snare2Num2.value == count){
+        if(snare2Num.value == count || snare2Num2.value == count){
             snare2.play()
         }
     }
     if(hat2Box.checked){
-        if(hat2Num.value == count){
-            hat2.play()
-        }
-        if(hat2Num2.value == count){
+        if(hat2Num.value == count || hat2Num2.value == count){
             hat2.play()
         }
     }
     if(closedHatBox.checked){
-        if(closedHatNum.value == count){
-            closedHat.play()
-        }
-        if(closedHatNum2.value == count){
+        if(closedHatNum.value == count || closedHatNum2.value == count){
             closedHat.play()
         }
     }
 
-    
-    
     let counter = document.querySelector('p');
     counter.innerText = count;
     
@@ -122,51 +97,41 @@ function update() {
 let temposelection = document.querySelector('#tempos');
 
 temposelection.addEventListener('change', ()=>{
-    let pulse = document.querySelector('.a');
     if(temposelection.value === 'fastest'){
         clearInterval(intervalID)
         setupUpdate(500)
-        pulse.style.animation = 'pulse 1000ms linear infinite';
         
     }
     if(temposelection.value === 'faster'){
         clearInterval(intervalID)
         setupUpdate(550)
-        pulse.style.animation = 'pulse 1100ms linear infinite';
         
     }
     if(temposelection.value === 'normal'){
         clearInterval(intervalID)
         setupUpdate(600)
-        pulse.style.animation = 'pulse 1200ms linear infinite';
         
     }
     if(temposelection.value === 'slower'){
         clearInterval(intervalID)
         setupUpdate(650)
-        pulse.style.animation = 'pulse 1300ms linear infinite';
         
     }
     if(temposelection.value === 'slowest'){
         clearInterval(intervalID)
         setupUpdate(700)
-        pulse.style.animation = 'pulse 1400ms linear infinite';
         
     }
 })
 
+let intervalID;
 
-
-var intervalID;
-
-// This function sets up update() to be called every 600ms
 function setupUpdate(speed) {
     intervalID = setInterval(update, speed);
+    let pulse = document.querySelector('.a');
+    let animationSpeed = speed * 2;
+    pulse.style.animation = 'pulse ' + animationSpeed.toString() + 'ms linear infinite';
 }
-
-
-
-
 
 setTimeout(setupUpdate(600), 300);
 
