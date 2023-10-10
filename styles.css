@@ -36,6 +36,7 @@ p {
 
 .a {
     font-size: 190px;
+    animation: pulse 1200ms linear infinite;
 }
 
 @keyframes pulse {
